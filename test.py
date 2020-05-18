@@ -1,7 +1,8 @@
-spam = ['apple', 'banana', 'kids', 'cats', 'something', 'good']
+def printPicnic(itemDict, leftWidth, rightWidth):
+    print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+    for k, v in itemDict.items():
+        print(k.ljust(leftWidth, '-') + str(v).rjust(rightWidth))
 
-
-def seprator(spam):
-    print(", ".join(spam[:-1]) + " and " + spam[-1])
-
-seprator(spam)
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 12, 6)
